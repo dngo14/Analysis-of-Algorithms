@@ -1,0 +1,7 @@
+I would make another array that is the same size as the given array.
+Then I would copy each element into the new array, however, before copying it over,
+I would go through the new graph and compare the element being copied to all the elements
+in the new element and find a spot where it is lower than the latter element and bigger
+than the element before it. Obviously this is not memory efficient since I am creating
+another array and going through that array multiple times, however I believe this method
+should be sufficient. 
