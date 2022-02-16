@@ -1,0 +1,27 @@
+CQ1:  What is the sum 1 + 2 + ... + 100?  (Please do this calculation by hand, using the formula that you have memorized.)
+    101*100/2 = 5050
+CQ2:  What is the sum 1 + 2 + ... + 200?  (Please do this calculation by hand, using the formula that you have memorized.)
+    200*201/2 = 20100
+CQ3:  What is the sum 1 + 2 + 4 + ... + 16?  (Please do this calculation by hand, using the formula that you have memorized.)
+    a1*r^n-1 / 2 = 31
+CQ4:  What is the sum 1 + 2 + 4 + ... + 256?  (Please do this calculation by hand, using the formula that you have memorized.)
+    a1*r^n-1 / 2 = 511
+CQ5:  What is the sum 1 + 3 + 9 + ... + 729?  (Please do this calculation by hand, using the formula that you have memorized.)
+    a1*r^n-1 / 2 = 1093
+CQ6: Would it be possible to build a stack that used every other element of an array, rather than all the elements (e.g. those with even indices only)?  
+Would it be possible to have the stack "grow backwards", in the sense that we would start on the opposite end of the array as usual, and push elements toward the first end?  
+Is there another variation you can imagine for an unusual way of implementing a stack?
+    Through coding, these different ways of implementing a stack can be made. It is possible, to only get the even indices or start
+    the stack backwards. Though the code might be more tedious and make the overall program slower these types of implementations are possible.
+    Some other variations are making the stack double everything that is pushed so there are two instances of the pushed element or 
+    the stack can can have it take the middle element when popping the element. 
+CQ7:  Would this sorting algorithm always produce the desired order, no matter the input?  Why or why not?  If not, how could we fix it?
+    It would probably not produce the desired order since it really depends on the length of the array,
+    I would have it repeat more than 4 times if the array is larger than 4 since not all of the numbers would be able to be swapped.
+
+CQ7: Would this more general sorting algorithm always produce the desired order, no matter the input?  Why or why not?  If not, how could we fix it?
+    This would allow for the algorithm to sort to the desired order since it would compare the current index to all other elements to check if it is
+    swappable.
+
+
+
