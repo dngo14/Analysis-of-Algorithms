@@ -1,0 +1,13 @@
+[ngo8@rns202-5 hw04]$ ./a_loop
+How many iterations? 300
+ Total cycles: 1574
+[ngo8@rns202-5 hw04]$ ./a_loop
+How many iterations? 300
+ Total cycles: 1498
+[ngo8@rns202-5 hw04]$ ./a_loop
+How many iterations? 300
+ Total cycles: 1502
+
+The time/cycles were not the same, but were around 1500 cycles each time I ran the
+function with 300 iterations. The average number for clock cycles was around 5 for one a_loop
+iteration after dividing 1500/300 iterations. 

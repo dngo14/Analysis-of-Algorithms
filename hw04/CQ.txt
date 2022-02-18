@@ -1,0 +1,11 @@
+CQ1:  For the first sorting algorithm (in after_swap3), is the algorithm correct?  That is, will it correctly sort any array of length n?  If so, give a one sentence justification for your answer, and if not, provide a specific counter-example (an array that would not be sorted correctly).
+    This algorithm would not work since the example 3 2 1 0 would not work after all of the iterations since it gives 0 2 3 1.
+CQ2:  For the second sorting algorithm (in after_swap4), is the algorithm correct?  That is, will it correctly sort any array of length n?  If so, give a one sentence justification for your answer, and if not, provide a specific counter-example (an array that would not be sorted correctly).
+    This algorithm also does not work since the example 3 1 2 0 would not work after all of the iterations since it returns 1 0 2 3.
+CQ3:  For the third sorting algorithm (in after_swap6), is the algorithm correct?  That is, will it correctly sort any array of length n?  If so, give a one sentence justification for your answer, and if not, provide a specific counter-example (an array that would not be sorted correctly).
+    This algorithm is correct since it would compare the beginning first and the compare the middle and ending of the array which works.
+CQ4:  For the third sorting algorithm (in after_swap6), if n is 4, what is a tight lower bound to the number of comparisons used over the course of the algorithm?
+    2+3+2+3 = 10 comparisons.
+CQ5: In two or three sentences, explain the strategy that you used for solving the previous puzzle.
+    Look at all the paths and choose the lowest and eject the completed towns. Since mine started at the top right,
+    I would try to traverse in a diagonal way.
