@@ -1,0 +1,34 @@
+CQ1: Write the contents of the plain array priority queue at each stage of the following operations:
+
+  insert(7)                  arr = [7]
+
+  insert(4)                  arr = [7, 4]
+
+  insert(6)                  arr = [7, 4, 6]
+
+  delete_min()               arr = [7, 6]
+
+  decrease_key_index(1, 2)   arr = [7, 2]
+
+  insert(8)                  arr = [7, 2, 8]
+
+
+CQ2: Write the contents of the sorted array priority queue at each stage of the following operations:
+
+  insert(7)                  arr = [7]
+
+  insert(4)                  arr = [4, 7]
+
+  insert(6)                  arr = [4, 6, 7]
+
+  delete_min()               arr = [6, 7]
+
+  decrease_key(1, 2)         arr = [2, 6]
+
+  insert(8)                  arr = [2, 6, 8]
+
+
+CQ3: In three or four sentences, describe the trade-offs that may exist in choosing one or the other of these two implementations of a priority queue.
+The ordered array lets the function find the minimum value significantly faster than the other one. However, the time to implement and having to place a value between a lower and higher element,
+would take some time. If the array was big, the function would have to go through the array to find where the value would be place. The other unordered array would be faster to implement and the
+speed as to insert an element would be fast and easy. However, finding the minimum would be difficult since you would need to go through the whole array to find the smallest value.
