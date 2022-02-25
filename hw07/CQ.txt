@@ -1,0 +1,53 @@
+CQ0:  A) Explain, in your own words, the differences between the panA and panB algorithms.
+panB is more efficient than panA in how for every iteration of find_min, we 
+do not recompute the warn values of all vertices, instead, we would only recompute
+the warn values of the vertex that goes into lockdown. This is vastly faster than panA
+since we do not have to go through the whole graph each time to get the warn values.
+
+B) How do we know that these changes still allow panB to compute a correct result, for any input graph?
+We are still finding the minimum for each vertex and we would recompute the warn values of existing warn 
+values so it would be able to traverse the whole graph and also find the minimum value for each node.
+
+CQ1:  In a complete binary tree with height 4, how many vertices are there?  How about height 8?
+it is the summation of 2^x starting from 0, so we can use the geometric summation equation to find 15 and  255
+
+CQ2:  In a complete ternary tree with height 4, how many vertices are there?  How about height 8?
+Similar process to QC1 gives 40 and 3280
+
+CQ3:  If a complete binary tree has 7 vertices, what is its height? 
+10
+
+CQ4:  A)  If we are using a plain array implementation, how many moves do you think we may be required to do, on average, each time we use the delete_min() operation?  Explain your reasoning.
+I would think that at most there would be 10 and atleast 2 iterations
+since we would repeat max times and each time there must be atleast 2 elements
+
+B)  For the above computation where we repeat ten times, what will the total number of move operations probably be close to?
+it should be in the order of 250, since we are comparing everything two times in general, and swapping things in the array a max of 50 times
+
+C) How will the cost of the insert() and decrease_key() operations compare to the cost of the delete_min() operations?
+The cost would be significantly lower for delete_min
+
+CQ5: A) If we are using a sorted array, how many swaps do you think we may need, on average, each time we use the insert() operation?  Explain your reasoning.
+It would probably be 2 because the averge amount of elements in the array is 6. So it should have 1/2
+of elements larger than the element in question os. Thus, it should take 2 swaps to reach the position we want.
+
+B) Similarly, how many swaps do you think we may need, on average, each time we use the decrease_key() operation?
+There should be 2 since there are only 2 keys since two keys are swapped
+
+C) For the above computation where we repeat ten times, what will the total number of swap operations probably be close to? 
+6 swaps using similar reasoning from QC5
+
+D) How will the cost of the insert() and decrease_key() operations compare to the cost of the delete_min() operations? 
+insert and decrease will be larger
+
+CQ6: Explain how you figured out the number of edges for a complete graph.  Is it related to one of the essential sums?
+Every vertex will have n-1-k edges so if there are n verticies, and k is the number of
+total verticies, then the sum would be 1-(n-1)
+
+CQ7: Explain how you figured out the number of edges for a complete bipartite graph.
+Each vertex has n/2 connections and there is always n/2 verticies that have new edges
+,so (n/2)^2 is the solution
+
+CQ8: Explain your approach to estimating the number of edges in the triangulated_circle graphs.
+Every line creates two triangles besides the firstline so the solution
+is n*2-3; the -3 comes from the first line.
