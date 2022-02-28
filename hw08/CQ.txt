@@ -1,0 +1,21 @@
+CQ1:  Which do you think will be faster in practice, panA or panB?  How might you go about describing how much faster one is than the other?
+    PanB is significantly faster than panA since it does not have to go through
+    the whole graph to recompute the warn values which cuts a lot of time.
+CQ2:  How is a recursive function like this similar to a loop? 
+    It ends with a base case which is similar to how a for loop has a limit. It is
+    different in how recursive functions call itself and reduce the computation after each
+    iteration, by splitting the work into smaller pieces.
+CQ3:  What is a situation where a recursive function may be more convenient to use than a loop (or perhaps there is no obvious way to use a loop)?
+    The recursice function is good to use when we can split the problem into multiple
+    pieces and conquer. Like a power function we can break it down to each multiplication.
+CQ4:  A) Explain, in your own words, the differences between the panB and panC_plain algorithms.
+    .Instead of going through neighbors to find min value, q stores the possible warn values.
+B) How do we know that these changes still allow panC_plain to compute a correct result, for any input graph?
+    Since it is using the same method, but a different way of finding/storing min value
+CQ5:  A) Explain, in your own words, the differences between the panA and panC_sorted algorithms.
+    PanC is significantly faster than panA since it does not need to go through the whole
+    graph to find the minimum value nor does it have to go through the graph to compute warn values,
+    but only the neighbors of the lockdown nodes.
+B) How do we know that these changes still allow panC_sorted to compute a correct result, for any input graph? 
+    We know the algorithm works since it only computes values for the neighbors of 
+    lockdown nodes.
