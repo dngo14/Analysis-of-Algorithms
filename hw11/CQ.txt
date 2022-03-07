@@ -1,0 +1,18 @@
+CQ1:  A) In the exercise r5 above (with two recursive calls 
+inside the r5 function), what formula could we 
+use to describe how many function calls would be made 
+for r5(j), for some value j?
+    Geometric sum formula with a ratio of 2 and starting value of 1, 
+    where j is the height
+
+B) In the exercise r5b above (with three recursive calls inside 
+the r5b function), what formula could we use to describe how many 
+function calls would be made for r5b(j), for some value j?
+    Geometric sum formula with a ratio of 3 and starting value of 1, 
+    where j is the height
+
+C) If we had another recursive function r5c that had d recursive
+calls (where d could be two, or three, or something larger), what formula could we use to describe how 
+many function calls would be made for r5c(j), for some value j?
+    Geometric sum formula with a ratio of d and starting value of 1, 
+    where j is the height
