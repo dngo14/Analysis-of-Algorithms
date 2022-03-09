@@ -1,0 +1,97 @@
+CQ1: Suppose we have a heap with 62 elements.
+A) How many layers are in this heap? 62
+
+B) In this heap, suppose we insert one element.  
+In the insert() function, how many times will we iterate through the loop, at most?  Please explain your answer. 63. 62 to go through all of the 
+layers and 1 to place the new element
+
+C) In this heap, suppose we use decrease_key() to significantly reduce one of the keys.  How many times will we iterate through the loop, maximum?  
+Why? 61, for each iteration because it already knows the position of the original element. So if it is last, it will only have 61 things to compare to.
+
+D) Finally, suppose we use delete_min().  
+How many times will we iterate through the loop, in the cases that cost the most? Once each. So two
+
+
+CQ2: Now let's consider larger heaps:
+
+A) In a heap with 1000 elements, how many layers would there be? 
+1000
+
+B) In a heap with 1000 elements, how would you describe the costs for insert(), decrease_key(), and delete_min()? 
+1001. 1000. 1000 for each iteration
+
+C) In a heap with a million elements, how many layers would there be? 
+1000000
+
+D) In a heap with a million elements, how would you describe the costs for insert(), decrease_key(), and delete_min()? 
+1000001 1000000 1000000 for each iteration
+
+E) How would you describe the increase in cost, when comparing a heap of 1000 elements with a heap of a million elements?  Does this comparison surprise you? 
+It will be a linear cost.
+
+
+CQ3: How did you approach part C for r7?  Please explain in at least one complete sentence. 
+the function before a_n-1 is added twice to the new functions first iteration n. a_n = 2*an-1 + n
+
+CQ4: How did you approach part C for r7b?  Please explain in at least one complete sentence. 
+the function before a_n-1 is added twice to the new functions first iteration n. a_n = 2*an-1 + n^2
+
+CQ5: How did you approach part C for r7c?  Please explain in at least one complete sentence. 
+the function before a_n-1 is added three times to the new functions first iteration n. a_n = 3*an-1 + n
+
+CQ6: How did you approach part C for r7d?  Please explain in at least one complete sentence.
+the function before a_n-1 is added three times to the new functions first iteration n. a_n = 3*an-1 + n^2
+
+CQ7:  Explain, in your own words, the differences between the panB and panD algorithms. 
+PanB has an efficient way to sort the elements in the q to speed things up. PanB does not have this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
