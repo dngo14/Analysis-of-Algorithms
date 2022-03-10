@@ -1,0 +1,135 @@
+CQ1:  A) Given the above scenario, how many swaps are likely needed each time we do a delete_min()? 
+How many times will sift_down() likely be called, directly or indirectly?
+    We would eventually have to delete 20 nodes and so 20 times for delete_min. As for sift_down,
+    we would call it 20 times in delete_min, but also we would recursively call inside the function,
+    which would add another possible 20 times so 40 overall
+B) How many times will we do a delete_min() on this graph?
+    atleast 20 times
+C) What is the expected total number of swaps across all the calls to delete_min()?
+    It would be the sum of 1 to 10 so about 55 swaps 
+D) If the time taken by a single call to sift_down() (not counting any recursive calls within it) is 
+two nanoseconds, and the overhead involved in each call to delete_min() (other than the calls to sift_down()) 
+is 10 nanoseconds, then how much time do we expect to be used by calls to delete_min() for this graph, overall?
+    We would expect 2*20+10*20 = 240 nanoseconds
+
+CQ2:  A) Again, given the above scenario, how many swaps are likely needed each time we do an insert()?  
+How many times will bubble_up() likely be called, directly or indirectly?
+    We would insert the 20 nodes, so 20 calls for insert. And we would call bubble up 20 times, one 
+    for each node and another possible 20 for the recursive calls which results in 40 times
+B) How many swaps are likely needed each time we do a decrease_key()?
+    We would decrease_key when the warn value is lower with a different connection. Considering
+    that there are 40 edges, then decrease_key could be called 20 times since the other 20 is the initial
+    values, so 20 times
+C) How many times will we do an insert() for this graph?
+    We would do 20 inserts
+D) Suppose we end up calling decrease_key() half as often as we do insert().  In that case, what is the total number 
+of swaps likely required for the whole algorithm on this small graph?
+    20/2 is 10 calls so 10*20 = 200 swaps
+D) If the time taken by one call to bubble_up() (excepting any recursive calls) inside of insert() or decrease_key() is 
+two nanoseconds, and the additional overhead involved in each call to insert() or decrease_key() is 10 nanoseconds, then 
+how much time do we expect to be used by calls to insert() or decrease_key() for this graph, overall?
+    2*20+10*20 = 240 nanoseconds
+
+CQ3:  A) Given the above scenario, how many swaps are likely needed each time we do a delete_min()? How many times will sift_down() likely 
+be called, directly or indirectly?
+    We would call delete_min 100000 times so there would be 100000 swaps. As for sift_down,
+    there would be 100000 + 100000 since we also recursively call the function.
+B) How many times will we do a delete_min() on this graph?
+    100000 times
+C) What is the expected total number of swaps across all the calls to delete_min()?
+    200000 swaps
+D) If the time taken by a single call to sift_down() (not counting any recursive calls within it) is two nanoseconds, and the overhead 
+involved in each call to delete_min() (other than the calls to sift_down()) is 10 nanoseconds, then how much time do we expect to be used by 
+calls to delete_min() for this graph, overall?
+    2*100000 + 10*100000 nanoseconds
+
+CQ4:  A) Again, given the above scenario, how many swaps are likely needed each time we do an insert()?  How many times will bubble_up() 
+likely be called, directly or indirectly?
+    100000 nodes so a possible 100000 swaps in insert and then there would be 200000 calls to
+    bubble_up
+B) How many swaps are likely needed each time we do a decrease_key()?
+    There would be swaps for each neighbor which is 200000 edges, so 200000 swaps are possible
+C) How many times will we do an insert() for this graph?
+    100000 times
+D) Suppose we end up calling decrease_key() half as often as we do insert().  In that case, what is the total number of swaps likely 
+required for the whole algorithm on this small graph?
+    So, 50000 calls to decrease_key and so there would be 50000*100000 possible swaps
+D) If the time taken by one call to bubble_up() (excepting any recursive calls) inside of insert() or decrease_key() is two nanoseconds, 
+and the additional overhead involved in each call to insert() or decrease_key() is 10 nanoseconds, then how much time do we expect to be used 
+by calls to insert() or decrease_key() for this graph, overall?
+    100000*2+10*100000 nanoseconds
+
+CQ5:  A) Which is larger:  the time invested in all the calls to nearby(), or all the calls to delete_min()?  Why?
+    Nearby() would be called 200000 times (neighbors), but delete_min would be called 100000 times. If we assume
+    that the times for each call is the same, then nearby would be greater since we have to look at all the neighbors while
+    for delete_min we would would only call for the top node value each time.
+
+CQ6:  Consider the following code:
+int s = 4*3 + 6*7 + 8*9;        // 3 multiplications
+for (int i = 0; i < n; ++i) {   // loop n times
+    s += 5*(4*i + 2);           //   2 multiplications
+}
+A. How many multiplications happen outside the loop?
+    3
+B. How many multiplications happen inside the loop, total (as a function of n)?
+    2*n
+C. What is the total number of multiplications overall (as a function of n)?
+    2*n+3
+
+CQ7: Consider the following pseudocode, and please write your answers as simple functions:
+loop n times      // first loop
+  7 multiplications
+loop n times      // outer loop
+  loop n times    //   inner loop
+    8 multiplications
+A. How many times do we go through the first loop?
+    n times
+B. How many times do we go through the inner loop, total?
+    n*n times
+C. How many multiplications are done inside the inner loop, total?
+    n*n*8
+D. What is the total number of multiplications, overall?
+    n*7 + n*n*8
+
+CQ8: In the following loop exercise, please again provide your answers as simple formulas.  
+Notice the names given in comments for each of the various loops.  If no upper bound can be given, 
+say infinity, and if no lower bound can be given, say 0
+5 multiplications
+loop n times  // first loop
+    between 3 and 6 multiplications
+loop n times  // first outer loop
+    loop n times  // first inner loop
+        between 4 and 7 multiplications
+    loop between n/2 and n times  // second
+        at most 3 multiplications
+    loop 2*n times  // third inner loop
+        loop 3*n times  // innermost loop
+            between 2 and 5 multiplications
+loop n times  // second outer loop
+    loop n times // second-to-last loop
+        4 multiplications
+    loop between n/3 and n/2 times  // last loop
+        between 6 and 12 multiplications
+A. How many times do we go through the first inner loop, total?
+    n*n
+B. How many times do we go through the innermost loop, total?
+    n*2*n*3*n
+C. How many total multiplications happen in the innermost loop, minimum?
+    n*2*n*3*n*2
+D. What is a tight upper bound for the total number of multiplications?
+    5 + n*6 + n*n*7 + n*n*3 + n*2*n*3*n*5 + n*n*4 + n*n/2*12
+E. What is a tight lower bound for the total number of multiplications?
+    5 + n*3 + n*n*4 + n*2*n*3*n*2 + n*n*4 + n*n/3*6
+
+
+
+
+
+
+
+
+
+
+
+
+
