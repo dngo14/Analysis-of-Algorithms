@@ -1,0 +1,102 @@
+CQ1: In your own words, with your own example, explain this property of exponents.
+    Multiplying the number by itself "power" times.
+CQ2: In your own words, with your own example, explain this property of exponents.
+        Multiplying the number to the multiplication of both powers
+CQ3:  For the formula 7*n + 2*n4 + 5, what is the appropriate Theta?
+    n^4
+CQ4:  For the formula 7*n5 + 2*n3 + 5, what is the appropriate Theta?
+    n^5
+CQ5:  For the formula (2*n + 3)*(4*n + 2), what is the appropriate Theta? (Hint:  multiply it out first!
+    n^2
+CQ6:  For the formula 7*n + 2*4n + 5, what is the appropriate Theta?
+    4^n
+CQ7:  For the formula 100*2n + 7*3n + 17, what is the appropriate Theta?
+    3^n
+CQ8:  Consider the following code:
+
+int s = 4*3 + 6*7 + 8*9;        // 3 multiplications
+for (int i = 0; i < n; ++i) {   // loop n times
+    s += 5*(4*i + 2);           //   2 multiplications
+}
+
+How can we describe the number of multiplications, with Theta?
+    n since we loop n times
+
+CQ9:  Consider the following pseudocode:
+
+loop n times      // first loop
+  7 multiplications
+loop n times      // outer loop
+  loop n times    //   inner loop
+    8 multiplications
+
+How can we describe the number of multiplications, with Theta?
+    n^2 since we have nested for loop of n
+
+5 multiplications
+loop n times  
+    between 3 and 6 multiplications
+loop n times  
+    loop n times 
+        between 4 and 7 multiplications
+    loop between n/2 and n times  
+        at most 3 multiplications
+    loop 2*n times  
+        loop 3*n times  
+            between 2 and 5 multiplications
+loop n times 
+    loop n times 
+        4 multiplications
+    loop between n/3 and n/2 times 
+        between 6 and 12 multiplications
+
+How can we describe the number of multiplications, with Theta?
+    the first loop gives us n, the second nested loop gives us n^2
+    and the third nested loop gives us n^2 so we can simplify to
+    2n^2
+
+CQ11:  For the formula 7*v + 9*v2 + 2*e, what is the appropriate Theta?
+    v^2+e 
+
+CQ12:  For the formula 7*v + 9*e2 + 2*e, what is the appropriate Theta?
+    v+e^2
+
+CQ13:  In the panA algorithm, assuming the input graph has v vertices and e edges, how many times will we reach the if statement in the find_min() function, total (described with Theta)?  Explain your answer.
+    v^2 since we would go through the whole graph each time it is called and
+    it is called v times, which results in v^2
+CQ14:  In the panA algorithm, assuming the input graph has v vertices and e edges, how many times will we reach the first if statement in the recompute_warn_values() function, total (described with Theta)?  Explain your answer.
+    It would be v * e^v since we would go through the whole graph and for each
+    node, we would go through the whole graph again to recompute warn values. So,
+    we have v calls for each node, then e^v visits to each neighbor, thus we have
+    v*e^v
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
