@@ -1,0 +1,21 @@
+Exercise 1: Why do you think that the "givens" about the domain and range of the functions f and g are part of the definition?
+    Because we cannot have f(n) less than or equal to 0 nor can we have a function
+    that is takes a number less than 1.
+Exercise 2: Type in the complete definition for "Big O" (don't copy paste) to help you remember it (and include the first part!).
+    Definition of "Big O": Assume f and g are functions from the positive integers to
+    positive reals. f = O(g) means there exists a fized value c > 0, such that f(n) <= c*g(n)
+    for all n >= 1 so we have f = O(g) is stated as f is O of g.
+Exercise 3: Type in the complete definition for 𝛀 (don't copy paste) to help you remember it.
+    Definition of "Omega": Assume f and g are functions from the positive integers to postive reals
+    f = 𝛀(g) "f is Omega of g" means that there exists a fixed value c > 0,
+    such that f(n) >= c*g(n) for all n >= 1.
+Exercise 4: Type in the complete definition for 𝚹 (don't copy paste) to help you remember it.
+    Definition of "Theta": Assume f and g are funtions from the positive integers to positive reals.
+    f = 𝚹(g) "f is Theta of g" means that there exists a fixed value c > 0, such that g(n)/c <= f(n) < c*g(n) for all n >= 1
+
+
+
+
+
+
+
