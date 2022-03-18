@@ -1,0 +1,57 @@
+Exercise 1: Use the definition of 𝚶 to prove the following: 5n = 𝚶(2n)
+    c = 4 would cause 5n <= 8n so 5n = 𝚶(2n)
+Exercise 2: Use the definition of 𝛀 to prove the following: 2n^2 = 𝛀(3n)
+    There exists an n such that n^2 would be larger. So, if we had
+    n = 2c+1 then the value of n will be larger than c3n
+Exercise 3: Use the definition of 𝚶 to prove the following: n log(n) = 𝚶(n^2)
+    c can be 1 and when n = 1 so 1^2 >= log(1)
+Exercise 4: Use the definition of 𝛀 to prove the following: 2^n = 𝛀(n^3)
+    c can be 1100 so that c2^n would be always bigger than n^3
+Exercise 5: Use the definition of 𝚹 to prove the following: 3n^2 + 4n + 6 = 𝚹(n^2)
+
+Exercise 6: If we have a function f(n) = 7, that means that the value of the function f(n) 
+is always seven, no matter what we use for n.  It is called a "constant function".  Use the definition of 𝚹 
+to prove the following relationship between two constant functions: 500 = 𝚹(1)
+    we would have 1/501 <= 500 <= 500*1
+Exercise 7: Use the definition of 𝚶 to show that the following statement is false: 2n^2 = 𝚶(7n)
+    There is an integer that is c7n and to prove that the statement is false,
+    we can show that c7n <= 2n^2 by having n = 7/2c so we have 2(7/2c+1)>c*(7/2c+1)
+Exercise 8: Use the definition of 𝛀 to show that the following statement is false: 7n = 𝛀(3n^2)
+    7n is a constant so it would eventually be overtaken by 3n^2
+Exercise 9: Use the definition of 𝚹 to show that the following statement is false: n log(n) = 𝚹(n)
+    since nlog(n) outpaces n, then there is a point where nlog(n) would be greater than n
+Exercise 10: Use the definition of 𝚶 to prove that the following is true:
+If the function f1 = O(g) and the function f2 = O(g) as well, then the sum f1 + f2 = O(g).
+    there is a constant in both functions so we know that each function is represented as
+    c_1g and c_2g. So, we have f1+f2 = c_1g+c_2g = g(c_1+c_2) so there is some
+    constant that satisfies the condition.
+Exercise 11: If f(n) = 𝛀(g(n)), does that imply that f(n) + 1000 = 𝛀(2 * g(n))?  Why or why not?
+    Yes since 𝛀 only pertains to the how the functions generate than the intitial values
+Exercise 12:  Consider the following snippet of C++ code:
+for ( int i = 0; i < n; ++i )
+    for ( int j = 0; j < i; ++j )
+        x += 4*3*2*j;
+How many multiplications will be performed by this code?  Please provide a theta-bound, and explain your answer.
+    The first interation is 1 and then 2 and then 3 and so on to n. So, we have,
+    n*(sum_1^n)*4
+Exercise 13:  Consider the following snippet of C++ code:
+for ( int i = 0; i < n; ++i )
+    for ( int j = i; j < sqrt(n); ++j )
+        x += 42*sin(.3859) + 9382.9*n;
+How many multiplications will be performed by this code?  Please provide a theta-bound, and explain your answer.
+    The iteration are the same as the previous where the first iteration will be 1, then 2, all the way to
+    sqrt(n) so we would have n*(sum_1^sqrt(n))*2
+Exercise 14: What is the cost (time complexity), using 𝚹, of insertion sort?  Explain your answer.
+    The highest possible cost would go through every element twice, so we have n^2 so we have theta(n^2)
+Exercise 15: What is the time complexity (using 𝚹) of selection sort?  Explain your answer.
+    Worst case possible would going through every element twice so we also have n^2 so we have theta(n^2)
+Exercise 16: What is the cost (using 𝚹) of doing n pushes with a stack implemented with the "increase by ten" strategy?  
+Explain why.  What is the cost per push (that is, the average cost), again expressed with 𝚹?
+    There is a constant space of 10 and we would push n elements so we have 10+n so theta(10+n)
+Exercise 17: What is the cost (using 𝚹) of doing n pushes with a stack implemented with the "increase by doubling" strategy?  
+Explain why.  What is the cost per push (that is, the average cost), again expressed with 𝚹?
+    2n elements is set at first then n elements are pushed so we have theta(3n)
+
+
+
+
