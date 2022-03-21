@@ -1,0 +1,88 @@
+Exercise 1:  Consider the following recursive function:
+function f(n)
+    for i in 0…n
+        for j in 0…n
+            for k in 0…n
+                print "."
+    if n > 0
+        f(n/4)
+        f(n/4)
+A. For this function, what are the values of a, b, and d?
+    a = 2
+    b = 4
+    d = 3
+B. What is the recurrence?
+    T(n) = 2*T(n/4) + n^3
+C. What case of the Master Theorem does it fall into?
+    first case
+D. What is the solution to the recurrence?
+    O(n^3)
+
+
+Exercise 2:  Consider the following recursive function:
+function f(n)
+    for i in 0…n
+        print "."
+    if n > 0
+        f(n/3)
+        f(n/3)
+        f(n/3)
+        f(n/3)
+A. For this function, what are the values of a, b, and d?
+    a = 4
+    b = 3
+    d = 1
+B. What is the recurrence?
+    T(n) = 4*T(n/3) + n
+C. What case of the Master Theorem does it fall into?
+    third case
+D. What is the solution to the recurrence?
+    O(4^(log_3(n)))
+
+Exercise 3:  Consider the following recursive function:
+function f(n)
+    for i in 0…n
+        print "."
+    if n > 0
+        f(n/2)
+        f(n/2)
+A. For this function, what are the values of a, b, and d?
+    a = 2
+    b = 2
+    d = 1
+B. What is the recurrence?
+    T(n) = 2*T(n/2) + n
+C. What case of the Master Theorem does it fall into?
+    second case
+D. What is the solution to the recurrence?
+    O(n*log_2(n))
+
+Exercise 4:  Consider the following recursive function:
+    function f(n)
+    for i in 0…n
+        print "."
+    if n > 0
+        f(n/3)
+        f(n/3)
+A. For this function, what are the values of a, b, and d?
+    a = 2
+    b = 3
+    d = 1
+B. What is the recurrence?
+    T(n) = 2*T(n/3) + n
+C. What case of the Master Theorem does it fall into?
+    first case
+D. What is the solution to the recurrence?
+    O(n)
+
+Exercise 5:  In your own words (using about three sentences), justify case 3 of the Master Theorem (assuming that the important quantity is the number of recursive calls). 
+    In case three we know that d is less than log_b(a). Because of this,
+    we know that as n goes to infinity, the exponential part of O(alogb(n)) would
+    overtake everything else in the term. 
+
+Exercise 6:  In your own words (using about three sentences), justify case 2 of the Master Theorem.
+    In case two, d is equal to log_b(a) which results in O(n^dlog_b(n)), and because no n is bigger than the other
+    we know that there exists an integer such that the right term multiplied by that integer would be greater than or equal to the
+    left term. 
+
+
