@@ -1,0 +1,121 @@
+Exercise 1:  Who is your partner for this homework?
+    Griffin Rauber
+
+Exercise 2:  Please read chapter zero of the textbook by yourself.  In this first reading, 
+read at a normal pace, not working everything out, but noticing the parts that are easy or difficult.
+    👍
+
+Exercise 3:  Having read the chapter once:A) What is a part of the chapter that you found easier than most other parts?
+    Learning about the history of numbers and the beginning portions of the fibonacci numbers. Finding the recurrence and the algorithm was relatively self-explanatory
+    B) What is a part of the chapter that you found more challenging than other parts?
+    When the text started to talk about Moor's law and tried to analyze the algorithm with basic computer steps and more advanced computer steps. 
+    C) What is a second part of the chapter that you found challenging?
+    The Big O notation was a little weird when the book started to divide the two functions and where we need to find a constant c to make the notation work. However, the notation does make sense and learning about how we can divide the functions to find a c is useful.
+
+Exercise 4:  Compare notes with your partner on the results of Exercise 3.  Did you have similar or different impressions?
+    We had very similar impressions. Mostly the same for the easy and hard parts of the reading. 
+
+Exercise 5:  Read the chapter again by yourself, with greater attention to the challenging parts.  Try to figure them out, but don't dwell on them too long, just make a medium effort.
+    👍
+
+Exercise 6:  Having read the chapter twice:
+    A) What is another part of the chapter that you found to be easier than most other parts?
+    The notation for comparing functions is pretty simple and how if we have a function like n^3+2n we can disregard the 2n since 2n would be negligible as n grows
+    B) Regarding the area identified in question 3B above, how does it look after a second read?  Has the challenge been resolved, or is it still there?
+    The second read helped strengthen my understanding basic computer steps and allowed me to look more closely on how they determined the amount of steps for each fibonacci number
+    C) Similarly, regarding the part of the chapter identified in question 3C, what is its status now, after reading through a second time?
+    Reading the chapter again, the notation of the Big-O and the other notations to compare functions are more cleared. Also how we can divide the functions to 
+    find a c makes more sense to me since we can find when a function outgrows the other.
+
+Exercise 7:  For any part(s) of the chapter that are not completely figured out, individually read just those parts of the chapter one more time, and wrestle with them some more (the third time).
+    👍
+
+Exercise 8:  With your partner, talk over the most challenging parts of the chapter.  Together, have you resolved all the questions you have about this content?  If so, what was the most important insight you gained, and if not, what is a shared continuing question (one that we might discuss during class)?
+    We had similar struggles while reading the chapter. The fibonacci pseudocode and the recurrence made sense since we took classes that covered a similar conjecture. 
+    However, when we tried to explain the sequence with basic computer steps, it was a little confusing. We talked about how Moore's law 
+    applies to the sequence as well as our technology. Additionally, we talked about the function fib2(n) and how they implemented the array as well as the binary tree. 
+    It was a little confusing on the computer steps and counting the amount of steps to equate a fibonacci number. The most important insight we learned is probably how 
+    we basically take what dominates the function as the most important part; also how we can divide the functions to find a strict integer. 
+
+Exercise 9:  Review the pseudocode for the various pan algorithms, so that you are ready to write parts of them down during class on Wednesday.
+    👍
+Exercise 10:  Book exercise 0.1, parts a) through h).
+
+a: f = Θ(g) since n has the same power
+b: f = O(g) since 1/2 < 2/3
+c: f = Θ(g) because the log would eventually be bigger for a n
+d: f = Θ(g) both functions equate basically the same power since we can have a c integer
+e: f = Θ(g) since the n has the same power
+f: f = Θ(g) since the square on the n can be a constant so we have n as the same power
+g: f = Ω(g) because the log would be overtaken by the power 1.01
+h:  f = Ω(g) because the n^2 dominates the function 
+
+Exercise 11:  Book exercise 0.2.Show that, if c is a positive real number, then g(n) = 1 + c + c2 + · · · + cn is:
+(a) Θ(1) if c < 1.
+(b) Θ(n) if c = 1.
+(c) Θ(c^n) if c > 1.
+The moral: in big-Θ terms, the sum of a geometric series is simply the first term if the series isstrictly decreasing, the last term if the series is strictly increasing, or the number of terms if theseries is unchanging.
+a: Looking at the function, we know for values where c < 1, while c increases the function would decrease and so, we know that as c goes to 
+infinity, then the function goes to 0. Furthermore, since the function is greater than 1 due to the fact that we add 1 in the 
+beginning of the formula then we have 1 < g(n) > lim c -> infinity g(n) so we can conclude that Θ(1) if c < 1.
+b: When c = 1 then we have g(n) = 1+1+1+1..+1 = n, so we have g(n) = Θ(n)
+c: When c > 1, the largest that the term goes to is c^n so we have that term dominate the function for large values of n, thus we have Θ(c^n) if c > 1.
+
+Exercise 12:  Book exercise 0.3 part a).
+a: Use induction to prove that Fn ≥ 2^0.5n for n ≥ 6For n = 6, we have F_6 >= 2^0.5*6. 
+We can solve the RHS which would equate to 2^0.5*6 = 8. On the LHS we have F_6 which is F_5+F_4 
+which from the fibonacci series is 5 and 3 respectively, so we have F_6 = 8. 
+Thus, since the RHS = LHS then the conjecture is true as desired. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
