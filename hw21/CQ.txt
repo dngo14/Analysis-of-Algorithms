@@ -1,0 +1,115 @@
+Exercise 1: In your own words, with your own example, explain this property of logarithms.
+The property portrays how a function log with a number to a power is the same as taking the power and shifting it to the front of the log and then multiplying out. 
+An example would be log_2(2^5) is the same as 5*log_2(2) which is 5. We can do this since the power inside the log is the same as multiplying out the log that many 
+times since the base would still be a factor of the number due to the exponent
+
+Exercise 2: In your own words, with your own example, describe this property of logarithms.  Why is it called the change of base formula?
+This property shows how you can change a log function to be represented as a fraction of two logs. The two logs would have the base and the number as the element in the 
+log and the logs would have a shared number for the base. It is called the change of base formula since we are changing the base of the log to be a common factor of the original 
+base and number. An example would be log_9(81) = log_3(81)/log_3(9) = 4/2 = . Note that the new base must be a factor of the original base.
+
+Exercise 3: When describing the running time of an algorithm that involves a logarithm using asymptotic notation, we will often write log(n) rather than log2(n) or log10(n).  Why?  (Hint:  log2(10) is also a fixed constant.)
+It does not matter since the trend would be the same regardless of the base. From the log we will still know how efficient or not efficient the algorithm 
+would be since the change in base would not affect the speed/representation 
+of the asymptotic notation.
+
+Exercise 4:  book exercise 2.1
+Use the divide-and-conquer integer multiplication algorithm to multiply the two binary integers 10011011 and 10111010. 
+x_L = 1001*2^4
+x_R = 1011
+y_L = 1011*2^4
+y_R = 1010
+xy = (2^(n/2)1001*2^4+1011)(2^(n/2)1011*2^4+1010) = (2^n1001*2^4*1011*2^4) + 2^n/2(1001*2^4*1010+1011*1011*2^4) + 1011*1010
+
+This simplifies to 28*1100011+24*11010011+110110 = 111000010011110
+
+Exercise 5:  book exercise 2.12
+How many lines, as a function of n (in Θ(·) form), does the following program print? Write a recurrence and solve it. You may assume n is a power of 2. 
+function f(n)
+ if n > 1: 
+print_line(‘‘still going’’) 
+f(n/2) 
+f(n/2) 
+d = 0 a = 2 b = 2 
+T(n) = 2T(n/2)+1
+So,  from the master theorem we have case 2, so we have O(n^dlog_b(n)) which is Theta(n)
+
+Exercise 6:  book exercise 2.4
+Suppose you are choosing between the following three algorithms: 
+• Algorithm A solves problems by dividing them into five subproblems of half the size, recursively solving each subproblem, and then combining the solutions in linear time. 
+
+• Algorithm B solves problems of size n by recursively solving two subproblems of size n − 1 and then combining the solutions in constant time.
+
+ • Algorithm C solves problems of size n by dividing them into nine subproblems of size n/3, recursively solving each subproblem, and then combining the solutions in O(n 2 ) time
+What are the running times of each of these algorithms (in big-O notation), and which would you choose? 
+A: We have a = 5, b = 2, d = 1
+T(n) = 5T(n/2) + n so we have case 3 so we have O(n^log_2(5)) = O(n^2.33)
+
+B: We have a summation of n since we are solving the subproblems n-1 each time. Each time we split by 2 each time so we have 2 paths each time so we have 2 to some power. 
+Since we have the summation from n to 0, we have O(2^n). It is basically making a binary tree of height n. 
+
+C: We have a = 9, b = 3, d = 2
+T(n) = 9T(n/3) + n^2
+From the master theorem we have case 2 because log_3(9) = 2 so, O(n^2logn) 
+
+We will have algorithm 3 be the faster algorithm since B is out of the picture since 2^n gets big really fast while the 2.33 in algorithm A dominates more than the logn and 
+the square on n
+
+Exercise 7:  book exercise 2.19
+A k-way merge operation. Suppose you have k sorted arrays, each with n elements, and you want to combine them into a single sorted array of kn elements. 
+(a) Here’s one strategy: Using the merge procedure from Section 2.3, merge the first two arrays, then merge in the third, then merge in the fourth, and so on. What is the 
+time complexity of this algorithm, in terms of k and n? 
+
+(b) Give a more efficient solution to this problem, using divide-and-conquer.
+
+A: We have N elements then 2N then 3N elements all the way up to (k-1)N elements. We then have a summation of the elements all the way up to (k-1)N elements so we can use 
+the summation formula which k * N(k-1) / 2 which can simplified to N*k^2-k / 2 and since the -k and the 2 gets less dominant as k increases, 
+then we can get rid of them to have a final O(nk^2)
+
+B: We can use merge sort and instead of numbers as the elements, we will have the arrays themselves as the elements in merge sort. So we would divide the list of arrays in
+ two then recursively merge the arrays. This would reduce the running time and make the algorithm of combining arrays faster. 
+
+
+Exercise 8:  book exercise 2.17
+Given a sorted array of distinct integers A[1, . . . , n], you want to find out whether there is an index i for which A[i] = i. Give a divide-and-conquer algorithm that
+ runs in time O(log n).
+
+You would use a binary search method where you would look for the middle of the list first and check for the element. If the element is bigger than the index we will look 
+towards the left of the list and if the element is smaller than we will look towards the right of the list. We can effectively 
+cut off half of the list each time since when the element is bigger than the i then there is not enough room for the next element to be closer to i, so we would look at the 
+left side. The opposite is done when the element is less than i. From this, we can effectively divide and conquer the list by splitting it in half each time. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
