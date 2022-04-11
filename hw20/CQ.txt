@@ -1,0 +1,91 @@
+Exercise 1:  Let us compare panA and panB on this kind of graph.
+A: How many times faster do you expect panB to be (than panA)?  Please answer with a single number, e.g. 32.5.
+4.99 faster
+B: Explain your reasoning:  how did you get your answer for part A?
+Looking at the changed function from recompute warn values to nearby, nearby does 10000 less calls since we do not traverse the whole graph for each call. So, when we add up the 
+total computations and divide we get the pan B is about 5 times faster
+
+Exercise 2:  Let us compare panB and panC_plain on this kind of graph.
+How many times faster do you expect panC_plain to be (than panB)?  Please answer with a single number, e.g. 32.5.
+9.96 faster
+Explain your reasoning:  how did you get your answer for part C?
+It is about 10 times faster since we significantly improve find min to delete min. Delete min only handles about 
+1000 values at a time and we call it 10000 times while for find min we go through all the nodes and call it the amount of nodes we have. 
+
+Exercise 3:  Let us compare panC_plain and panC_sorted on this kind of graph.
+How many times faster do you expect panC_sorted to be (than panC_plain)?  Please answer with a single number, e.g. 32.5.
+0.668 faster
+Explain your reasoning:  how did you get your answer for part E?
+The sorted pan c is slower because for each insert and decrease we must reorder the array which costs a lot. 
+Since there are always about 1000 elements in the array and we call it the amount times of nodes for insert and about half of that for decrease_key then it takes more time.
+
+Exercise 4:  Let us compare panC_sorted and panD on this kind of graph.
+How many times faster do you expect panD to be (than panC_sorted)?  Please answer with a single number, e.g. 32.5.
+50.1
+Explain your reasoning:  how did you get your answer for part G?
+Pan D is significantly faster because instead of an array, we have a heap tree that contains 10 levels. Due to this, insert and decrease key would significantly be reduced since we are only swapping a max 10 times. So, we can add up the 
+total amount of computations and calls and then divide to see that Pan D would be 50 times faster since we are using a heap rather than an array that contains 1000 elements.
+
+Exercise 5:  book exercise 1.2
+log(10^n-1)/n<4
+16^n+1<10^n  false
+Lim (log (10^n))/n = 3.3
+
+Exercise 6:  book exercise 1.4
+n! < n^n as n goes to infinity
+so, we are left woth log(n!) which is O(nlog(n))
+
+Exercise 7:  book exercise 1.6
+Binary numbers can be computed through addition so it would still work
+
+Exercise 8:  book exercise 1.17
+We will have sum from 1 to y-1 of (n^2)(logx)^2 which is O(log(x)^2y^3)
+
+Exercise 9:  book exercise 1.18
+We have 210 = 30 * 7 = 6*5*7 = 2*3*5*7
+We have 588 = 84*7 = 21*4*7 = 3*2*2*7*7
+We have 42 = 2*3*7
+So, gcd(168, 210) is 42
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
