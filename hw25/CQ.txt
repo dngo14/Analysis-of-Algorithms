@@ -1,0 +1,43 @@
+Exercise 1: Implement the solution given for the longest increasing subsequence problem given in section 6.2.  Have your program read a list of numbers from a file, and output the length of the longest increasing subsequence. Please submit your code through git as hw25/longest-sub.cpp
+Uploaded
+
+Exercise 2: Implement the (slow) recursive solution mentioned in the text box for the longest increasing subsequence problem, and compare the running time with your previous solution (for several input sizes).  Please submit your code as hw25/longest-slow.cpp
+Uploaded
+The running time of the dynamic programming solution is O(n^2) since the we go through the graph
+about twice. We go through it once to determine the place of i, and then another time to determine the
+edges to i which means we get about more than n^2 but for simplicity, we regard this about n^2.
+As for the solution to the recursion method, we are making a tree where we are breaking the problem into multiple
+pieces each time. The tree goes through the same subproblems multiple times due to the fact how the increasing L(j) uses past
+L(j) which makes the cost of the algorithm be exponential. This goes to about O(2^n).
+
+Exercise 3: (CQ) Explain, in your own words, why the running times for these two strategies are so different.
+The running times are so differnt due to how they solve the problem. This first method uses a moving pointer like algorithm. We would move
+the pointer, which is i, and that would go through the whole array. We have a nested loop within that where it would compare the previous
+elements to the i to check if it is strictly increasing. Each iteration does not go through the whole graph, but approximately goes through the graph
+multiple times, but approximately n times which is where we get O(n^2) since we go through the list approximately n^2 times to compare the moving i
+to the previous elements. On the other hand, the recursion solution breaks the list into multiple parts. However, to solve the increasing L(j) we would use previous
+L(j) which already be solved by previous iterations in the recursion. Due to this fact, the algorithm goes into exponential time, since as the list gets
+larger, the amount of times we would have to go through previous L(j) to solve current L(j) exponentially increases, thus the running time
+would be O(2^n). Therefore the first solution would be significantly faster than the recursion method. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
