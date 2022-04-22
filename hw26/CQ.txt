@@ -1,0 +1,29 @@
+Exercise 4: If we have two strings with three characters each, how many possible alignments would there be?
+There would 6^2 alignments or 36 alignments.
+
+Exercise 6:  Please answer this question after you have filled in the table.  When you fill in the very last entry of the table (in the lower right), which other entries are most helpful in figuring out the optimal alignment?  Why?
+Looking at the beginning column to find the optimal placement was useful in finding the other elements
+because we know which and how many of the elements from the original string we are using. Furthermore,
+looking at the previous row to determine the row below it was also very helpful since we only need to add another dash
+or element from the previous row to determine the element in the same column.
+
+Exercise 7:  Please create a table of numbers as shown in the video for the following two words:  GCCGCG and GGTCGT  (the same ones that you used in the anansi exercise).  Use the same reasoning suggested in the video for filling in individual table entries.
+    ""  G   G   T   C   G   T
+""  0   1   2   3   4   5   6
+
+G   1   0   1   2   3   4   5      
+
+C   2   1   1   2   3   4   5
+
+C   3   2   2   2   2   3   4        
+
+G   4   3   2   3   1   2   3
+
+C   4   4   3   3   2   3   4
+
+G   4   5   4   4   4   4   3   
+
+
+
+
+
