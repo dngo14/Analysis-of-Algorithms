@@ -1,0 +1,25 @@
+Sum of contiguous subsequence: The time complexity would be O(n) since
+we only go through the array once to get the subproblems of the dynamic program
+solution.
+
+Hotel algorithm: The time complexity would be O(n^2) since we have a double for loop.
+The first for loop goes through n times and the second one goes to more than n times
+since we have the guard of j < i so we can conclude it is around n for simplicity which results in
+O(n^2) time.
+
+Yuckdonalds: This would be similar to the hotel algorithm since we have a nested for loop. The
+time complexity would be around O(n^2) as well since the first loop goes through the array once, and
+the second loop does a similar thing to the one about hotels. The second loop goes about n times
+for simplicity due to the guard where the index < i-1 (index of top level loop), so we have a time
+complexity of O(n^2).
+
+Longest common substring: The time complexity for this algorithm would be O(m*n) since
+we only go through the first string once (n) and go through the second string once (m). THese
+loops are nested and so we have the length of the first string multiplied by the length of the
+second string to give us O(n*m).
+
+Palindrome: The time complexity of this algorithm would be O(n^2) since we have a 
+nested for loop that goes through the string once in the first for loop and similarly to the
+hotel and yuckdonalds problem, we go through an iteration of the first loop which can be simplified
+to about n times. Thus, we have n^2 as the time complexity since the algorithm goes through the 
+array twice. 
